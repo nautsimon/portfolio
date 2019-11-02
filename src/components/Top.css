@@ -1,0 +1,24 @@
+.three {
+  height: 100vh;
+}
+canvas {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: -10;
+}
+.comingSoonDiv {
+  position: absolute;
+  margin-top: -80vh;
+  left: 50;
+  margin-left: 400px;
+}
+/* p {
+  margin: 0px;
+  padding: 0px;
+}
+
+h4 {
+  margin: 0px;
+  padding: 0px;
+} */
