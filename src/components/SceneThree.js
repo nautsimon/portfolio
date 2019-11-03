@@ -13,7 +13,7 @@ varying float fogDepth;
 void main(){
   vec2 stripPos = vec2( 0.0, vDisplace );
   vec4 stripColor = texture2D( pallete, stripPos );
-  stripColor *= pow(1.0-vDisplace, 1.0);
+  stripColor *= pow(2.0-vDisplace, 1.0);
   gl_FragColor = stripColor;
   #ifdef USE_FOG
     float fogFactor = smoothstep( fogNear, fogFar, fogDepth );
@@ -238,9 +238,6 @@ class SceneThree extends Component {
   }
 
   componentDidMount() {
-    var pallete = {
-      palleteImage: "pallete.png"
-    };
     const width = this.mount.clientWidth;
     const height = this.mount.clientHeight;
     // console.log(width, height);
@@ -249,15 +246,18 @@ class SceneThree extends Component {
 
     //////////////scene///////////////////
     var scene = new THREE.Scene();
-    var fogColor = new THREE.Color(0xffffff);
+    var fogColor = new THREE.Color(0x010101);
     scene.background = fogColor;
-    scene.fog = new THREE.Fog(fogColor, 10, 400);
-    var camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 10000);
+    scene.fog = new THREE.Fog(fogColor, 20, 400);
+    var camera = new THREE.PerspectiveCamera(30, width / height, 0.1, 10000);
     camera.position.y = 20;
     camera.position.z = 20;
     camera.rotation.z = (180 * Math.PI) / 180;
-    var ambientLight = new THREE.AmbientLight(0xffffff, 1);
+    var ambientLight = new THREE.AmbientLight(0xffffff, 300);
     scene.add(ambientLight);
+    // var light = new THREE.DirectionalLight(0x4b66f6, 1);
+    // light.position.set(-0.75, -1, 0.5);
+    // scene.add(light);
     var renderer = new THREE.WebGLRenderer({
       antialias: true
     });
@@ -267,7 +267,7 @@ class SceneThree extends Component {
     ///////////////end of scene///////////////
 
     //////////////scene Elements/////////////
-    var geometry = new THREE.PlaneBufferGeometry(100, 400, 400, 400);
+    var geometry = new THREE.PlaneBufferGeometry(100, 400, 100, 100);
 
     var uniforms = {
       time: { type: "f", value: 0.0 },
@@ -275,7 +275,7 @@ class SceneThree extends Component {
       roadWidth: { type: "f", value: 0.5 },
       pallete: { type: "t", value: null },
       speed: { type: "f", value: 1 },
-      maxHeight: { type: "f", value: 10.0 },
+      maxHeight: { type: "f", value: 20.0 },
       color: new THREE.Color(1, 1, 1)
     };
 
@@ -286,7 +286,8 @@ class SceneThree extends Component {
       ]),
       vertexShader: xvert,
       fragmentShader: xfrag,
-      wireframe: false,
+
+      wireframe: true,
       fog: true
     });
 
