@@ -364,7 +364,7 @@ class SceneThree extends Component {
     e.preventDefault();
 
     var x, y;
-    if (e.type == "mousemove") {
+    if (e.type === "mousemove") {
       x = e.clientX;
       y = e.clientY;
     } else {

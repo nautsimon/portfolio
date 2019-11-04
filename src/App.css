@@ -13,6 +13,98 @@
 @-ms-viewport {
   width: device-width;
 }
+
+/* generics */
+.main {
+  margin-right: 15%;
+  margin-left: 15%;
+  margin-top: 80px;
+  padding-bottom: 90px;
+}
+.row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.rowND {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.tri {
+  width: 29%;
+  margin-left: 2%;
+  margin-right: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.faceImg {
+  width: 70%;
+  padding: 0px 15%;
+}
+.subtitleImg {
+  width: 300px;
+  margin-top: -55px;
+  margin-bottom: 25px;
+}
+.centerVert {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.center {
+  text-align: center;
+}
+
+.alignRight {
+  text-align: right;
+}
+.icon {
+  width: 40px;
+  padding: 3px;
+  transition: transform 0.5s;
+}
+.icon:hover {
+  transform: scale(1.2);
+}
+
+.bottomBorder {
+  margin-top: 30px;
+  border-bottom: 3px solid #000000;
+}
+/* generics */
+/* overview */
+.resumeImg {
+  width: 100%;
+
+  transition: opacity 0.5s;
+}
+.resumeImg:hover {
+  opacity: 0.7;
+}
+
+.overRight {
+  width: 76%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.overLeft {
+  width: 17%;
+  margin-left: 1%;
+  margin-right: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.lilPad {
+  padding-top: 30px;
+}
+/* overview */
+/* three render */
 .three {
   height: 100vh;
   width: 100%;
@@ -23,6 +115,9 @@ canvas {
   position: absolute;
   z-index: -10;
 }
+/* three render */
+
+/* landing page */
 .titleImg {
   width: 400px;
   position: absolute;
@@ -35,7 +130,7 @@ canvas {
   position: absolute;
   margin-top: -5vh;
   left: 50%;
-  margin-left: -20px;
+  margin-left: -15px;
   transition: opacity 0.5s;
 }
 .downArrow:hover {
@@ -52,7 +147,6 @@ canvas {
   width: 20px;
 }
 
-/* Tooltip text */
 .tooltip .tooltiptext {
   opacity: 0;
   margin-top: -49px;
@@ -69,7 +163,6 @@ canvas {
   transition: opacity 1s;
 }
 
-/* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover {
   opacity: 0.7;
 }
@@ -80,17 +173,103 @@ canvas {
   content: " ";
   position: absolute;
   top: 50%;
-  right: 100%; /* To the left of the tooltip */
+  right: 100%;
   margin-top: 20px;
   border-width: 5px;
   border-style: solid;
   border-color: transparent white transparent transparent;
 }
+/* landing page */
 
+/* dev projects */
+.toolsDiv {
+  padding-bottom: 20px;
+  width: 100%;
+}
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+.toolsUl {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 30px;
+  border-left: 1px #000 solid;
+}
+li {
+  list-style: none;
+}
+li .toolsLi {
+  color: #000;
+  margin: 0px 50%;
+  text-decoration: none;
+  width: 7%;
+}
+
+.toolIco {
+  width: 80%;
+  padding: 10%;
+  margin-top: -25%;
+  border-right: 1px #000 solid;
+  transition: all 0.5s ease;
+}
+
+.toolIco:hover {
+  opacity: 0.7;
+  /* -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  /* filter: grayscale(0%); */
+}
+.toolCompDiv {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+}
+.toolCompRight {
+  width: 57%;
+  margin: 0px 2%;
+}
+.toolCompLeft {
+  width: 25%;
+  margin: 0px 2%;
+}
+.toolCompImg {
+  width: 100%;
+}
+.toolComponentDiv {
+  height: 250px;
+}
+/* dev projects */
+
+/* footer */
+footer {
+  height: 200px;
+  background-image: url("img/foot.PNG");
+  background-attachment: fixed;
+
+  background-position: bottom;
+  color: #ffffff;
+}
+
+/* footer */
 @media screen and (max-width: 600px) {
   .downArrow,
   .tooltip {
     display: none;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .alignRight {
+    text-align: center;
+  }
+  .overLeft,
+  .overRight,
+  .tri {
+    width: 100%;
+    margin: 0px;
   }
 }
 
