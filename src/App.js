@@ -1,18 +1,23 @@
 import React, { Component } from "react";
+import { Link, Element } from "react-scroll";
+
 import DevProjects from "./components/DevProjects";
 import SceneThree from "./components/SceneThree";
-import titleImg from "./img/title3.png";
+
+import titleImg from "./img/title4.png";
 import whatsThis from "./img/whatsThis.png";
 import downArrow from "./img/downArrow.png";
-import { Link, Element } from "react-scroll";
-import face from "./img/face8.png";
+import face from "./img/face12.png";
+
 import youImg from "./img/youtube.png";
 import linImg from "./img/linkdin.png";
 import gitImg from "./img/github.png";
-import emaImg from "./img/email.png";
+import bloImg from "./img/blog.png";
 import devImg from "./img/devpost.png";
-import overview from "./img/overview.png";
+
 import resume from "./img/resume.png";
+import bike from "./img/bike2.jpg";
+
 import icoAct from "./img/icoAct.png";
 import icoBlog from "./img/icoBlog.png";
 import icoDot from "./img/icoDot.png";
@@ -21,6 +26,7 @@ import icoMand from "./img/icoMand.png";
 import icoNew from "./img/icoNew.png";
 import icoRd from "./img/icoRD.png";
 import icoTweet from "./img/icoTweet.png";
+
 import icoActAlt from "./img/icoActAlt.png";
 import icoBlogAlt from "./img/icoBlogAlt.png";
 import icoDotAlt from "./img/icoDotAlt.png";
@@ -29,6 +35,22 @@ import icoMandAlt from "./img/icoMandAlt.png";
 import icoNewAlt from "./img/icoNewAlt.png";
 import icoRdAlt from "./img/icoRDAlt.png";
 import icoTweetAlt from "./img/icoTweetAlt.png";
+
+import cap from "./img/cap.png";
+import first from "./img/first.png";
+import ghana from "./img/ghana.png";
+import omnitech from "./img/omnitech.png";
+import orion from "./img/orion.png";
+import root from "./img/root.png";
+
+import capAlt from "./img/capAlt.png";
+import firstAlt from "./img/firstAlt.png";
+import ghanaAlt from "./img/ghanaAlt.png";
+import omnitechAlt from "./img/omnitechAlt.png";
+import rootAlt from "./img/rootAlt.png";
+import orionAlt from "./img/orionAlt.png";
+
+import overview from "./img/overview3.png";
 import devProjects from "./img/devProjects.png";
 import projects from "./img/projects.png";
 import aboutMe from "./img/aboutMe.png";
@@ -53,6 +75,8 @@ const devImagesAlt = [
   icoRdAlt,
   icoTweetAlt
 ];
+const Images = [orion, first, ghana, omnitech, root, cap];
+const ImagesAlt = [orionAlt, firstAlt, ghanaAlt, omnitechAlt, rootAlt, capAlt];
 
 class App extends Component {
   constructor(props) {
@@ -99,8 +123,9 @@ class App extends Component {
             <div className="row">
               <div className="tri centerVert">
                 <p className="regularText alignRight">
-                  Hi, my name is Simon. I am a student at the University of
-                  Chicago studying Astrophysics and Computer Science.
+                  Hi, my name is Simon. I'm currently a student at the
+                  University of Chicago double majoring in Astrophysics and
+                  Computer Science.
                 </p>
               </div>
               <div className="tri centerVert">
@@ -108,11 +133,21 @@ class App extends Component {
               </div>
               <div className="tri centerVert">
                 <div className="rowND">
-                  <img src={emaImg} alt="email" className="icon" />
-                  <img src={linImg} alt="linkedin" className="icon " />
-                  <img src={gitImg} alt="github" className="icon " />
-                  <img src={devImg} alt="devpost" className="icon" />
-                  <img src={youImg} alt="youtube" className="icon " />
+                  <a href="https://cookedcorn.casa/bike">
+                    <img src={bloImg} alt="email" className="icon" />
+                  </a>
+                  <a href="https://www.linkedin.com/in/simonmahns">
+                    <img src={linImg} alt="linkedin" className="icon " />
+                  </a>
+                  <a href="https://github.com/simonmahns">
+                    <img src={gitImg} alt="github" className="icon " />
+                  </a>
+                  <a href="https://devpost.com/simonmahns?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav">
+                    <img src={devImg} alt="devpost" className="icon" />
+                  </a>
+                  <a href="https://www.youtube.com/channel/UCF0aMNDCAR9EBaDjbS0jjaQ">
+                    <img src={youImg} alt="youtube" className="icon " />
+                  </a>
                 </div>
               </div>
             </div>
@@ -205,7 +240,7 @@ class App extends Component {
             </div>
             <div className="toolsDiv">
               <ul className="toolsUl">
-                {devImages.map((name, index) => {
+                {Images.map((name, index) => {
                   return (
                     <div>
                       <li className="toolsLi">
@@ -222,7 +257,7 @@ class App extends Component {
                             src={
                               this.state.devFilter === index
                                 ? name
-                                : devImagesAlt[index]
+                                : ImagesAlt[index]
                             }
                             onClick={() => this.handleDevFilter(index)}
                           />
@@ -243,29 +278,41 @@ class App extends Component {
             </div>
             <div className="row">
               <div className="tri centerVert">
-                <p className="regularText alignRight">
-                  Hi, my name is Simon. I am a student at the University of
-                  Chicago studying Astrophysics and Computer Science.
+                <p className="regularText ">
+                  <p className="titleP">Fun Facts:</p>
+                  - Bears can run up to 37 mph
+                  <br />
+                  - I was born in Alaska.
+                  <br />- Both of my parents are immigrants, from Japan and
+                  Chile.
+                  <br />- All the matter that makes up the human race could fit
+                  in a sugar cube.
+                  <br /> - I attended three different high schools.
+                  <br />- Because of gravitational time dilation, time travels
+                  slower in your basement than in your living room.
+                  <br />- Cranberry juice helps prevent UTIs.
                 </p>
               </div>
               <div className="tri centerVert">
-                <img src={face} alt="face" className="faceImg" />
+                <p className="titleP">My super cool and epic bike trek:</p>
+                <img src={bike} alt="bike" className="bikeImg" />
+                <p className="regularText center">
+                  Over the summer I completed a solo and self supported bike
+                  trip from Baltimore, Maryland to Anchorage, Alaska.
+                  <a href="https://cookedcorn.casa/bike">More About This</a>
+                </p>
               </div>
               <div className="tri centerVert">
-                <div className="rowND">
-                  <img src={emaImg} alt="email" className="icon" />
-                  <img src={linImg} alt="linkedin" className="icon " />
-                  <img src={gitImg} alt="github" className="icon " />
-                  <img src={devImg} alt="devpost" className="icon" />
-                  <img src={youImg} alt="youtube" className="icon " />
-                </div>
+                <p className="regularText ">
+                  <p className="titleP">Contact Me:</p>
+                  Email: simonm@uchicago.edu <br />
+                  Discord: naut#1973
+                </p>
               </div>
             </div>
           </div>
         </Element>
-        <footer>
-          <p>sadasd</p>
-        </footer>
+        <footer></footer>
       </div>
     );
   }
