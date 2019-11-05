@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300&display=swap");
 .App {
   font-family: "Roboto", sans-serif;
   width: 100%;
@@ -26,6 +26,18 @@
   display: flex;
   flex-direction: row;
 }
+.bi {
+  width: 50%;
+  margin-left: 0%;
+  margin-right: 0%;
+  display: flex;
+  flex-direction: column;
+
+  text-align: left;
+}
+.padL {
+  padding-left: 2%;
+}
 .rowND {
   width: 100%;
   display: flex;
@@ -40,10 +52,22 @@
   flex-direction: column;
   align-items: center;
 }
+.quad {
+  width: 25%;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 .faceImg {
   width: 70%;
   padding: 0px 15%;
+}
+.uchiImg {
+  width: 60%;
+
+  padding: 0% 20%;
 }
 .subtitleImg {
   width: 300px;
@@ -76,9 +100,13 @@
   margin-top: 32px;
   border-bottom: 1px solid #000000;
 }
+.bottomBordered {
+  margin-top: 32px;
+}
 
 .titleP {
   font-size: 19px;
+  padding-bottom: 6px;
 }
 .bikeImg {
   width: 100%;
@@ -86,22 +114,36 @@
 /* generics */
 /* overview */
 .resumeImg {
+  position: absolute;
   width: 100%;
-
+  margin-left: -100%;
+  pointer-events: all;
+  opacity: 0;
   transition: opacity 0.5s;
+  z-index: 7;
+}
+.resumeImgAlt {
+  position: relative;
+  pointer-events: none;
+  width: 100%;
+  transition: opacity 0.5s;
+  z-index: 1;
 }
 .resumeImg:hover {
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .overRight {
-  width: 76%;
+  width: 78%;
   margin-left: 2%;
-  margin-right: 2%;
+  margin-right: 0%;
+  align-content: center;
+}
+.educationPad {
 }
 .overLeft {
-  width: 17%;
-  margin-left: 1%;
+  width: 18%;
+  margin-left: 0%;
   margin-right: 2%;
   display: flex;
   flex-direction: column;
@@ -109,6 +151,9 @@
 }
 .lilPad {
   padding-top: 30px;
+}
+.bottomPad {
+  padding-bottom: 20px;
 }
 /* overview */
 /* three render */
@@ -203,7 +248,7 @@ ul {
   align-content: center;
   justify-content: center;
   width: 100%;
-  padding-top: 30px;
+
   border-left: 1px #000 solid;
 }
 li {
@@ -211,23 +256,40 @@ li {
 }
 li .toolsLi {
   color: #000;
-  margin: 0px 50%;
+  /* margin: 0px 50%; */
   text-decoration: none;
-  width: 7%;
 }
-
+.outerDiv {
+  width: 100%;
+  border-right: 1px #000 solid;
+  /* left: 50%;
+  margin-left: -100px; */
+}
+.liDiv {
+  position: relative;
+}
 .toolIco {
   width: 80%;
-  padding: 10%;
-  margin-top: -25%;
-  border-right: 1px #000 solid;
+  margin-left: 10%;
+  margin-right: 10%;
   transition: all 0.5s ease;
+  z-index: 5;
+  pointer-events: none;
+  position: relative;
 }
-
-.toolIco:hover {
-  opacity: 0.7;
-  /* -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
-  /* filter: grayscale(0%); */
+.grey {
+  width: 80%;
+  transition: all 0.5s ease;
+  filter: grayscale(90%);
+  -webkit-filter: grayscale(90%); /* Safari 6.0 - 9.0 */
+  z-index: 1;
+  pointer-events: all;
+  position: absolute;
+  margin-left: -90%;
+}
+.grey:hover {
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
 }
 .toolCompDiv {
   display: flex;
@@ -252,7 +314,11 @@ li .toolsLi {
 
 /* footer */
 footer {
-  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
   background-image: url("img/foot.PNG");
   background-attachment: fixed;
 

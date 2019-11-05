@@ -16,6 +16,8 @@ import bloImg from "./img/blog.png";
 import devImg from "./img/devpost.png";
 
 import resume from "./img/resume.png";
+import uchicago from "./img/uchicago.jpg";
+import resumeAlt from "./img/resumeAlt.png";
 import bike from "./img/bike2.jpg";
 
 import icoAct from "./img/icoAct.png";
@@ -158,14 +160,70 @@ class App extends Component {
             <div className="center">
               <img src={overview} alt="overview" className="subtitleImg" />
             </div>
+            <p className="titleP">Work Experience</p>
+            <div className="row bottomPad">
+              <div className="quad">
+                <i>Research Assistant (2019)</i>
+                <p>Harris School of Public Policy </p>
+              </div>
+              <div className="quad">
+                <i>EMT (2018-2019)</i>
+                <p>American Medical Response </p>
+              </div>
+              <div className="quad">
+                <i>Math Instructor (2018)</i>
+                <p>Mathnasium </p>
+              </div>
+              <div className="quad">
+                <i>Waiter/Bartender (2018)</i>
+                <p>Cazbar</p>
+              </div>
+            </div>
+
+            <div className="row bottomPad">
+              <div className="bi">
+                <p className="titleP">Education</p>
+                <div className="row">
+                  <div className="overLeft centerVert">
+                    <img src={uchicago} className="uchiImg" alt="resume" />
+                  </div>
+                  <div className="overRight">
+                    <i>Computer Science/Astrophysics</i>
+                    <p>Class of 2023</p>
+                    <p>GPA: 4.0</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bi">
+                <p className="titleP padL">Interships:</p>
+                <div className="row padL">
+                  <div className="bi ">
+                    <i>Data Science Intern (2017)</i>
+                    <p>JPAL</p>
+                  </div>
+                  <div className="bi ">
+                    <i>Workflow Intern(2019)</i>
+                    <p>Ampersand</p>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className="row">
-              <div className="overLeft">
-                <a href="www.pornhub.com">
-                  <img src={resume} className="resumeImg" alt="resume" />
-                </a>
+              <div className="overLeft centerVert">
+                <div className="liDiv">
+                  <img
+                    src={resumeAlt}
+                    className="resumeImgAlt"
+                    alt="resumeAlt"
+                  />
+                  <a href="https://www.pornhub.com/">
+                    <img src={resume} className="resumeImg" alt="resume" />
+                  </a>
+                </div>
               </div>
               <div className="overRight">
-                <p className="resumeTitle">Awards</p>
+                <p className="titleP">Awards</p>
                 <p>- Facebook Community Award (HackHarvard 2019)</p>
                 <p>- Hacker's Spirit Award (HackHarvard 2019)</p>
                 <p>- Star of Life Nominee (AMR 2019)</p>
@@ -175,7 +233,7 @@ class App extends Component {
                 </p>
                 <p>- Officer of the Year (VFW 2016, 2017)</p>
                 <br />
-                <p className="resumeTitle">Development Proficiencies</p>
+                <p className="titleP">Development Proficiencies</p>
                 <p>
                   Languages: Java, JavaScript, Python, PHP, Objective C, C#,
                   HTML/CSS, Git, Racket
@@ -204,23 +262,26 @@ class App extends Component {
               <ul className="toolsUl">
                 {devImages.map((name, index) => {
                   return (
-                    <div>
+                    <div className="outerDiv">
                       <li className="toolsLi">
                         <div className="liDiv">
                           <img
                             alt={"img"}
                             style={{
-                              filter:
-                                this.state.devFilter === index
-                                  ? "grayscale(0%)"
-                                  : "grayscale(90%)"
+                              opacity:
+                                this.state.devFilter === index ? "1" : "0"
                             }}
                             className="toolIco"
-                            src={
-                              this.state.devFilter === index
-                                ? name
-                                : devImagesAlt[index]
-                            }
+                            src={name}
+                          />
+                          <img
+                            alt={"img"}
+                            style={{
+                              opacity:
+                                this.state.devFilter === index ? "0" : "1"
+                            }}
+                            className="grey"
+                            src={devImagesAlt[index]}
                             onClick={() => this.handleDevFilter(index)}
                           />
                         </div>
@@ -242,23 +303,26 @@ class App extends Component {
               <ul className="toolsUl">
                 {Images.map((name, index) => {
                   return (
-                    <div>
+                    <div className="outerDiv">
                       <li className="toolsLi">
                         <div className="liDiv">
                           <img
                             alt={"img"}
                             style={{
-                              filter:
-                                this.state.devFilter === index
-                                  ? "grayscale(0%)"
-                                  : "grayscale(90%)"
+                              opacity:
+                                this.state.devFilter === index ? "1" : "0"
                             }}
                             className="toolIco"
-                            src={
-                              this.state.devFilter === index
-                                ? name
-                                : ImagesAlt[index]
-                            }
+                            src={name}
+                          />
+                          <img
+                            alt={"img"}
+                            style={{
+                              opacity:
+                                this.state.devFilter === index ? "0" : "1"
+                            }}
+                            className="grey"
+                            src={ImagesAlt[index]}
                             onClick={() => this.handleDevFilter(index)}
                           />
                         </div>
@@ -272,10 +336,11 @@ class App extends Component {
           </div>
         </Element>
         <Element name="over">
-          <div className="main bottomBorder ">
+          <div className="main bottomBordered ">
             <div className="center">
               <img src={aboutMe} alt="overview" className="subtitleImg" />
             </div>
+
             <div className="row">
               <div className="tri centerVert">
                 <p className="regularText ">
@@ -312,7 +377,16 @@ class App extends Component {
             </div>
           </div>
         </Element>
-        <footer></footer>
+        <footer>
+          <iframe
+            src="https://gifer.com/embed/fynK"
+            title="quirky"
+            width="250"
+            height="300"
+            frameBorder="0"
+            allowFullScreen
+          ></iframe>
+        </footer>
       </div>
     );
   }
