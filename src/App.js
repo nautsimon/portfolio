@@ -125,9 +125,8 @@ class App extends Component {
             <div className="row">
               <div className="tri centerVert">
                 <p className="regularText alignRight">
-                  Hi, my name is Simon. I'm currently a student at the
-                  University of Chicago double majoring in Astrophysics and
-                  Computer Science.
+                  Hi, my name is Simon. I'm a currently studying Astrophysics
+                  and Computer Science at the University of Chicago studying .
                 </p>
               </div>
               <div className="tri centerVert">
@@ -160,51 +159,45 @@ class App extends Component {
             <div className="center">
               <img src={overview} alt="overview" className="subtitleImg" />
             </div>
-            <p className="titleP">Work Experience</p>
-            <div className="row bottomPad">
-              <div className="quad">
-                <i>Research Assistant (2019)</i>
-                <p>Harris School of Public Policy </p>
-              </div>
-              <div className="quad">
-                <i>EMT (2018-2019)</i>
-                <p>American Medical Response </p>
-              </div>
-              <div className="quad">
-                <i>Math Instructor (2018)</i>
-                <p>Mathnasium </p>
-              </div>
-              <div className="quad">
-                <i>Waiter/Bartender (2018)</i>
-                <p>Cazbar</p>
-              </div>
-            </div>
 
             <div className="row bottomPad">
               <div className="bi">
-                <p className="titleP">Education</p>
-                <div className="row">
-                  <div className="overLeft centerVert">
-                    <img src={uchicago} className="uchiImg" alt="resume" />
-                  </div>
-                  <div className="overRight">
+                <p className="titleP">Work Experience</p>
+
+                <p>
+                  Research Assistant{" "}
+                  <i>at The Harris School of Public Policy (2019)</i>
+                </p>
+
+                <p>
+                  EMT <i>at American Medical Response (2018-2019)</i>
+                </p>
+
+                <p>
+                  Math Instructor <i>at Mathnasium (2018)</i>
+                </p>
+
+                <p>
+                  Waiter/Bartender <i>at Cazbar (2018)</i>
+                </p>
+                <p>
+                  Data Science Intern <i>at JPAL (2017)</i>
+                </p>
+
+                <p>
+                  Intern<i> at Ampersand (2019)</i>
+                </p>
+              </div>
+              <div className="bi">
+                <p className="titleP alignRight">Education</p>
+                <div className="row bottomPad">
+                  <div className="overRight alignRight">
                     <i>Computer Science/Astrophysics</i>
                     <p>Class of 2023</p>
                     <p>GPA: 4.0</p>
                   </div>
-                </div>
-              </div>
-
-              <div className="bi">
-                <p className="titleP padL">Interships:</p>
-                <div className="row padL">
-                  <div className="bi ">
-                    <i>Data Science Intern (2017)</i>
-                    <p>JPAL</p>
-                  </div>
-                  <div className="bi ">
-                    <i>Workflow Intern(2019)</i>
-                    <p>Ampersand</p>
+                  <div className="overLeft centerVert">
+                    <img src={uchicago} className="uchiImg" alt="resume" />
                   </div>
                 </div>
               </div>
@@ -342,7 +335,7 @@ class App extends Component {
             </div>
 
             <div className="row">
-              <div className="tri centerVert">
+              <div className="tri ">
                 <p className="regularText ">
                   <p className="titleP">Fun Facts:</p>
                   - Bears can run up to 37 mph
@@ -358,13 +351,13 @@ class App extends Component {
                   <br />- Cranberry juice helps prevent UTIs.
                 </p>
               </div>
-              <div className="tri centerVert">
+              <div className="tri ">
                 <p className="titleP">My super cool and epic bike trek:</p>
                 <img src={bike} alt="bike" className="bikeImg" />
-                <p className="regularText center">
+                <p className="regularText">
                   Over the summer I completed a solo and self supported bike
                   trip from Baltimore, Maryland to Anchorage, Alaska.
-                  <a href="https://cookedcorn.casa/bike">More About This</a>
+                  <a href="https://cookedcorn.casa/bike">(More About This)</a>
                 </p>
               </div>
               <div className="tri centerVert">
@@ -381,8 +374,8 @@ class App extends Component {
           <iframe
             src="https://gifer.com/embed/fynK"
             title="quirky"
-            width="250"
-            height="300"
+            width="150"
+            height="200"
             frameBorder="0"
             allowFullScreen
           ></iframe>

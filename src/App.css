@@ -15,6 +15,15 @@
 }
 
 /* generics */
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  border-bottom: 2px solid pink;
+  transition: all 0.5s;
+}
+a:hover {
+  border-bottom: 2px solid rgb(255, 100, 126);
+}
 .main {
   margin-right: 15%;
   margin-left: 15%;
@@ -50,7 +59,6 @@
   margin-right: 2%;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 .quad {
   width: 25%;
@@ -65,9 +73,9 @@
   padding: 0px 15%;
 }
 .uchiImg {
-  width: 60%;
+  width: 80%;
 
-  padding: 0% 20%;
+  margin-left: 20%;
 }
 .subtitleImg {
   width: 300px;
@@ -106,10 +114,12 @@
 
 .titleP {
   font-size: 19px;
-  padding-bottom: 6px;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 .bikeImg {
   width: 100%;
+  margin-bottom: 10px;
 }
 /* generics */
 /* overview */
@@ -142,9 +152,9 @@
 .educationPad {
 }
 .overLeft {
-  width: 18%;
+  width: 20%;
   margin-left: 0%;
-  margin-right: 2%;
+  margin-right: o%;
   display: flex;
   flex-direction: column;
   align-items: center;
