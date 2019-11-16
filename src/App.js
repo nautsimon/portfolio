@@ -2,12 +2,13 @@ import React, { Component } from "react";
 import { Link, Element } from "react-scroll";
 
 import DevProjects from "./components/DevProjects";
+import Projects from "./components/Projects";
 import SceneThree from "./components/SceneThree";
 
 import titleImg from "./img/title4.png";
 import whatsThis from "./img/whatsThis.png";
 import downArrow from "./img/downArrow.png";
-import face from "./img/face12.png";
+import face from "./img/face9.png";
 
 import youImg from "./img/youtube.png";
 import linImg from "./img/linkdin.png";
@@ -84,13 +85,18 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      devFilter: 0
+      devFilter: 0,
+      projFilter: 0
     };
 
     this.handleDevFilter = this.handleDevFilter.bind(this);
   }
-  handleDevFilter(filterNum) {
-    this.setState({ devFilter: filterNum });
+  handleDevFilter(filterNum, isDev) {
+    if (isDev) {
+      this.setState({ devFilter: filterNum });
+    } else {
+      this.setState({ projFilter: filterNum });
+    }
   }
   render() {
     return (
@@ -126,7 +132,7 @@ class App extends Component {
               <div className="tri centerVert">
                 <p className="regularText alignRight">
                   Hi, my name is Simon. I'm a currently studying Astrophysics
-                  and Computer Science at the University of Chicago studying .
+                  and Computer Science at the University of Chicago.
                 </p>
               </div>
               <div className="tri centerVert">
@@ -162,42 +168,50 @@ class App extends Component {
 
             <div className="row bottomPad">
               <div className="bi">
-                <p className="titleP">Work Experience</p>
+                <p className="titleP">Notable Work Experience</p>
 
                 <p>
                   Research Assistant{" "}
                   <i>at The Harris School of Public Policy (2019)</i>
                 </p>
+                <p className="smallP">
+                  Using Google Vision and Tesseract to process hundreds of image
+                  into text for further analysis.
+                </p>
 
                 <p>
                   EMT <i>at American Medical Response (2018-2019)</i>
                 </p>
-
+                <p className="smallP">Patient care and report filing.</p>
                 <p>
-                  Math Instructor <i>at Mathnasium (2018)</i>
+                  Freelance<i> at Omnified Technologies (2017 - 2019)</i>
                 </p>
-
-                <p>
-                  Waiter/Bartender <i>at Cazbar (2018)</i>
+                <p className="smallP">
+                  Creating web apps, webscrapers, and simple scripts for various
+                  friends, clients, and people off Craigslist.
                 </p>
-                <p>
-                  Data Science Intern <i>at JPAL (2017)</i>
-                </p>
-
                 <p>
                   Intern<i> at Ampersand (2019)</i>
                 </p>
+                <p className="smallP">
+                  A short shadowing program where I learned about Django and the
+                  professional development ecosystem.
+                </p>
               </div>
-              <div className="bi">
-                <p className="titleP alignRight">Education</p>
-                <div className="row bottomPad">
-                  <div className="overRight alignRight">
-                    <i>Computer Science/Astrophysics</i>
-                    <p>Class of 2023</p>
-                    <p>GPA: 4.0</p>
-                  </div>
-                  <div className="overLeft centerVert">
-                    <img src={uchicago} className="uchiImg" alt="resume" />
+              <div className="bi centerVert">
+                <div>
+                  <p className="titleP alignRight">Education</p>
+                  <div className="row bottomPad">
+                    <div className="overRight centerVert2 ">
+                      <div className="alignRight">
+                        <i>Computer Science/Astrophysics</i>
+                        <p>Class of 2023</p>
+                        <p>GPA: 4.0</p>
+                      </div>
+                    </div>
+                    <div className="overLeft centerVert">
+                      <img src={uchicago} className="uchiImg" alt="resume" />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -275,7 +289,7 @@ class App extends Component {
                             }}
                             className="grey"
                             src={devImagesAlt[index]}
-                            onClick={() => this.handleDevFilter(index)}
+                            onClick={() => this.handleDevFilter(index, true)}
                           />
                         </div>
                       </li>
@@ -303,7 +317,7 @@ class App extends Component {
                             alt={"img"}
                             style={{
                               opacity:
-                                this.state.devFilter === index ? "1" : "0"
+                                this.state.projFilter === index ? "1" : "0"
                             }}
                             className="toolIco"
                             src={name}
@@ -312,11 +326,11 @@ class App extends Component {
                             alt={"img"}
                             style={{
                               opacity:
-                                this.state.devFilter === index ? "0" : "1"
+                                this.state.projFilter === index ? "0" : "1"
                             }}
                             className="grey"
                             src={ImagesAlt[index]}
-                            onClick={() => this.handleDevFilter(index)}
+                            onClick={() => this.handleDevFilter(index, false)}
                           />
                         </div>
                       </li>
@@ -324,7 +338,7 @@ class App extends Component {
                   );
                 })}
               </ul>
-              <DevProjects filter={this.state.devFilter} />
+              <Projects filter={this.state.projFilter} />
             </div>
           </div>
         </Element>
@@ -352,12 +366,17 @@ class App extends Component {
                 </p>
               </div>
               <div className="tri ">
-                <p className="titleP">My super cool and epic bike trek:</p>
+                <p className="titleP">
+                  My super cool and epic bike trek <span role="img">😎</span>:
+                </p>
                 <img src={bike} alt="bike" className="bikeImg" />
                 <p className="regularText">
                   Over the summer I completed a solo and self supported bike
-                  trip from Baltimore, Maryland to Anchorage, Alaska.
-                  <a href="https://cookedcorn.casa/bike">(More About This)</a>
+                  trip from Baltimore, Maryland to Anchorage, Alaska. (
+                  <a className="link" href="https://cookedcorn.casa/bike">
+                    More About This
+                  </a>
+                  )
                 </p>
               </div>
               <div className="tri centerVert">

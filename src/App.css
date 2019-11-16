@@ -18,10 +18,14 @@
 a {
   text-decoration: none;
   color: rgb(0, 0, 0);
+}
+.link {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
   border-bottom: 2px solid pink;
   transition: all 0.5s;
 }
-a:hover {
+.link:hover {
   border-bottom: 2px solid rgb(255, 100, 126);
 }
 .main {
@@ -87,6 +91,11 @@ a:hover {
   align-items: center;
   align-content: center;
   justify-content: center;
+}
+.centerVert2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 .center {
   text-align: center;
@@ -157,7 +166,6 @@ a:hover {
   width: 78%;
   margin-left: 2%;
   margin-right: 0%;
-  align-content: center;
 }
 .educationPad {
 }
@@ -296,6 +304,10 @@ li .toolsLi {
   z-index: 5;
   pointer-events: none;
   position: relative;
+}
+.smallP {
+  font-size: 14px;
+  padding-bottom: 3px;
 }
 .grey {
   width: 80%;
