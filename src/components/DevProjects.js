@@ -180,23 +180,50 @@ class Tools extends Component {
     } else {
       return (
         <div>
-          <h2>React Js</h2>
+          <p className="titleP2">Act Now</p>
           <div className="toolCompDiv">
             <div className="toolCompLeft">
               <img className="toolCompImg" alt="toolCompImg" src={bigAct} />
             </div>
             <div className="toolCompRight">
+              <p className="titleP3">Overview</p>
               <p>
-                React Js is a cutting edge javascript library developed by
-                Facebook that utilizes a virtual DOM in order to expedite
-                loading times and optimize the website. Also, because react js
-                facilitates the inline use of html in javascript files, frontend
-                development comes first. With React we create fast and beautiful
-                websites.
-                <br />
-                <br />
-                Learn more about <a href="react">React Js</a>
+                Act now is a chrome extension that notifies the user of nearby
+                activisim related events.
               </p>
+              <br />
+              <p className="titleP3">Skills/Tools used</p>
+              <p>
+                PhotoShop, Django REST Framework, ReactJs, Chrome Developer
+                tools
+              </p>
+              <br />
+              <a href="react">DevPost</a> <a href="react">GitHub</a>
+              {/* <div className="row">
+                <div className="bi">
+                  <p className="titleP3">Skills/Tools used</p>
+                  <p>
+                    PhotoShop
+                    <br /> Django REST Framework
+                    <br />
+                    ReactJs
+                    <br />
+                    Chrome Developer tools
+                  </p>
+                </div>
+                <div className="bi">
+                  <p className="titleP3">Overview</p>
+                  <p>
+                    Act now is a chrome extension that notifies the user of
+                    nearby activisim related events.
+                    <br />
+                    <br />
+                    <a href="react">GitHub</a>
+                    <br />
+                    <a href="react">DevPost</a>
+                  </p>
+                </div>
+              </div> */}
             </div>
           </div>
         </div>

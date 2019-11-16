@@ -117,6 +117,16 @@ a:hover {
   padding-top: 3px;
   padding-bottom: 3px;
 }
+.titleP2 {
+  font-size: 21px;
+  padding-top: 30px;
+  padding-bottom: -3px;
+}
+.titleP3 {
+  font-size: 19px;
+  padding-top: 0px;
+  padding-bottom: 3px;
+}
 .bikeImg {
   width: 100%;
   margin-bottom: 10px;
@@ -304,21 +314,27 @@ li .toolsLi {
 .toolCompDiv {
   display: flex;
   flex-direction: row;
-  padding-top: 20px;
+  padding-top: 15px;
 }
 .toolCompRight {
-  width: 57%;
+  width: 73%;
   margin: 0px 2%;
 }
 .toolCompLeft {
   width: 25%;
-  margin: 0px 2%;
+  margin: 0px 0%;
 }
 .toolCompImg {
   width: 100%;
 }
 .toolComponentDiv {
   height: 250px;
+}
+
+h2 {
+  padding: 0px;
+  margin: 0px;
+  margin-top: 25px;
 }
 /* dev projects */
 
