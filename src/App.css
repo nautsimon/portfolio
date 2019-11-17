@@ -22,11 +22,11 @@ a {
 .link {
   text-decoration: none;
   color: rgb(0, 0, 0);
-  border-bottom: 2px solid pink;
+  border-bottom: 1px solid black;
   transition: all 0.5s;
 }
 .link:hover {
-  border-bottom: 2px solid rgb(255, 100, 126);
+  border-bottom: 1px solid grey;
 }
 .main {
   margin-right: 15%;
@@ -71,6 +71,16 @@ a {
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+.footerText {
+  transition: all 1s;
+  background: white;
+  color: black;
+  font-size: 15px;
+}
+.footerText:hover {
+  background: black;
+  color: white;
 }
 .faceImg {
   width: 70%;
@@ -249,6 +259,7 @@ canvas {
 .tooltip:hover .tooltiptext {
   opacity: 1;
 }
+
 .tooltip .tooltiptext::after {
   content: " ";
   position: absolute;
@@ -323,6 +334,12 @@ li .toolsLi {
   -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
   filter: grayscale(0%);
 }
+.projDiv {
+  transition: all 1s;
+}
+.grey:hover .projDiv {
+  opacity: 0.3;
+}
 .toolCompDiv {
   display: flex;
   flex-direction: row;
@@ -339,6 +356,7 @@ li .toolsLi {
 .toolCompImg {
   width: 100%;
 }
+
 .toolComponentDiv {
   height: 250px;
 }

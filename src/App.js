@@ -23,7 +23,7 @@ import bike from "./img/bike2.jpg";
 
 import icoAct from "./img/icoAct.png";
 import icoBlog from "./img/icoBlog.png";
-import icoDot from "./img/icoDot.png";
+import icoSage from "./img/icoSage.png";
 import icoFspace from "./img/icoFspace.png";
 import icoMand from "./img/icoMand.png";
 import icoNew from "./img/icoNew.png";
@@ -32,7 +32,7 @@ import icoTweet from "./img/icoTweet.png";
 
 import icoActAlt from "./img/icoActAlt.png";
 import icoBlogAlt from "./img/icoBlogAlt.png";
-import icoDotAlt from "./img/icoDotAlt.png";
+import icoSageAlt from "./img/icoSageAlt.png";
 import icoFspaceAlt from "./img/icoFspaceAlt.png";
 import icoMandAlt from "./img/icoMandAlt.png";
 import icoNewAlt from "./img/icoNewAlt.png";
@@ -61,7 +61,7 @@ import "./App.css";
 const devImages = [
   icoAct,
   icoBlog,
-  icoDot,
+  icoSage,
   icoFspace,
   icoMand,
   icoNew,
@@ -71,7 +71,7 @@ const devImages = [
 const devImagesAlt = [
   icoActAlt,
   icoBlogAlt,
-  icoDotAlt,
+  icoSageAlt,
   icoFspaceAlt,
   icoMandAlt,
   icoNewAlt,
@@ -224,7 +224,7 @@ class App extends Component {
                     className="resumeImgAlt"
                     alt="resumeAlt"
                   />
-                  <a href="https://www.pornhub.com/">
+                  <a href="https://drive.google.com/file/d/1rfsm9sSg6gdWE1IpWn9qZdIMtoVtrwd7/view?usp=sharing">
                     <img src={resume} className="resumeImg" alt="resume" />
                   </a>
                 </div>
@@ -338,6 +338,7 @@ class App extends Component {
                   );
                 })}
               </ul>
+
               <Projects filter={this.state.projFilter} />
             </div>
           </div>
@@ -390,14 +391,17 @@ class App extends Component {
           </div>
         </Element>
         <footer>
-          <iframe
+          {/* <iframe
             src="https://gifer.com/embed/fynK"
             title="quirky"
             width="150"
             height="200"
             frameBorder="0"
             allowFullScreen
-          ></iframe>
+          ></iframe> */}
+          <a href="https://github.com/simonmahns/portfolio">
+            <p className="footerText">View code for this site</p>
+          </a>
         </footer>
       </div>
     );
