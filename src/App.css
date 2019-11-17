@@ -384,24 +384,75 @@ footer {
 
 /* footer */
 @media screen and (max-width: 600px) {
+  .main {
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 98%;
+  }
+  .toolComponentDiv {
+    height: 400px;
+  }
+  .resumeImg {
+    width: 50%;
+    margin-left: -75%;
+  }
+  .resumeImgAlt {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  .uchiImg {
+    display: none;
+  }
+
+  .toolCompImg,
+  .bikeImg {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
   .downArrow,
   .tooltip {
     display: none;
   }
-  .row {
+  .row,
+  .toolCompDiv {
     flex-direction: column;
+  }
+  .centerVert2 {
+    justify-content: center;
   }
   .alignRight {
     text-align: center;
   }
+  .toolCompLeft,
+  .toolCompRight,
+  .bi,
   .overLeft,
   .overRight,
   .tri {
     width: 100%;
     margin: 0px;
+    padding-top: 10px;
+  }
+  .titleImg {
+    width: 140px;
+    position: absolute;
+    margin-top: -60vh;
+    left: 50%;
+    margin-left: -69px;
   }
 }
-
+@media screen and (max-width: 350px) {
+  .subtitleImg {
+    width: 200px;
+    margin-top: -55px;
+    margin-bottom: 32px;
+  }
+  .toolComponentDiv {
+    height: 550px;
+  }
+}
 p {
   margin: 0px;
   padding: 0px;
