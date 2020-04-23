@@ -175,8 +175,7 @@ class App extends Component {
                   <i>at The Harris School of Public Policy (2019)</i>
                 </p>
                 <p className="smallP">
-                  Using Google Vision and Tesseract to process hundreds of image
-                  into text for further analysis.
+                  Webscraping and Datascience with Python.
                 </p>
 
                 <p>
